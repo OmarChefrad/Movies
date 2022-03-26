@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.e23d8ef1.css","mappings":"AAAA,wBAGI,sBAAuB,CAFvB,OAGJ,CAEA,KACI,uBAEJ","sources":["Pages/app.css"],"sourcesContent":[".App::-webkit-scrollbar {\r\n    width: 0;\r\n    /* Remove scrollbar space */\r\n    background: transparent;\r\n}\r\n\r\n.App {\r\n    -ms-overflow-style: none;\r\n    /* IE and Edge */\r\n}"],"names":[],"sourceRoot":""}
