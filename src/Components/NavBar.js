@@ -6,7 +6,7 @@ import { FaSearch } from "react-icons/fa"
 function NavBar() {
   return (
     <Nav>
-      <Link to="/">
+      <Link to="/Movies">
         <h1>MY MOVIES</h1>
       </Link>
       <Link to="/Popular">
@@ -39,6 +39,14 @@ const Nav = styled.div`
   margin-left: 4rem;
   margin-top: 1.5rem;
   -webkit-tap-highlight-color: transparent;
+  @media only screen and (max-width: 900px) {
+    width: 80rem;
+    height: 12rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    margin-left: 0rem;
+    margin-right: 4rem;
+  }
 
   a {
     text-decoration: none;
@@ -54,6 +62,11 @@ const Nav = styled.div`
     user-select: none;
     font-weight: 600;
     -webkit-tap-highlight-color: transparent;
+    @media only screen and (max-width: 900px) {
+      font-size: 3rem;
+      font-weight: 600;
+      padding-left: 2.5rem;
+    }
   }
   img {
     height: 100%;
@@ -64,8 +77,13 @@ const FaSEARCH = styled(FaSearch)`
   font-size: 1.7rem;
   cursor: pointer;
   text-decoration: none;
-  padding-left: 8rem;
+  padding-left: 10rem;
   color: black;
+  @media only screen and (max-width: 900px) {
+    height: 15vh;
+    width: 15vw;
+    padding-left: 5rem;
+  }
 `
 
 export default NavBar

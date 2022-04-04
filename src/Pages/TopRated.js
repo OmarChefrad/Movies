@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import NavBar from "../Components/NavBar"
 import styled from "styled-components"
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+
 
 function TopRated() {
   // Data state until local storing is available
@@ -30,13 +32,18 @@ function TopRated() {
         <H1>Top Rated</H1>
         {popular.map((movie) => {
           return (
-            <Frame key={movie.id}>
-              <Title>{movie.title}</Title>
-              <Img
-                src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path}
-                alt={movie.id}
-              />
-            </Frame>
+            <Link
+              to={"/details/" + movie.id}
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <Frame key={movie.id}>
+                <Title>{movie.title}</Title>
+                <Img
+                  src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path}
+                  alt={movie.id}
+                />
+              </Frame>
+            </Link>
           )
         })}
       </div>
@@ -54,10 +61,19 @@ const Frame = styled.div`
   height: 25rem;
   display: inline-flex;
   padding-left: 7.5rem;
+  @media only screen and (max-width: 900px) {
+    width: 65rem;
+    height: 45rem;
+    display: inline-flex;
+  }
 `
 const Title = styled.div`
   font-size: 1.3rem;
   font-weight: 600;
+  @media only screen and (max-width: 900px) {
+    font-size: 3rem;
+    font-weight: 600;
+  }
 `
 const Img = styled.img`
   border-radius: 14px;
@@ -67,12 +83,18 @@ const Img = styled.img`
   height: 35rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  @media only screen and (max-width: 900px) {
+    width: 69rem;
+    height: 40rem;
+    display: inline-flex;
+    margin-top: 1rem;
+  }
 `
 const H1 = styled.h1`
-  font-size: 3rem;
+  font-size: 4rem;
+  width:max-content;
   padding-left: 5rem;
   padding-top: 2rem;
-  user-select: none;
 `
 
 export default TopRated

@@ -1,5 +1,5 @@
 {
-    "homepage": "https://OmarChefrad.github.io/My-Movies",
+    "homepage": "https://OmarChefrad.github.io/Movies/",
     "name": "my-app",
     "version": "0.1.0",
     "private": true,
@@ -16,12 +16,13 @@
         "react-scripts": "5.0.0",
         "sass": "^1.49.9",
         "styled-components": "^5.3.3",
+        "uuidv4": "^6.2.13",
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "start": "react-scripts start",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
+        "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"

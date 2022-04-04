@@ -1,6 +1,6 @@
 {
-    "short_name": "App",
-    "name": "App",
+    "short_name": "My-Movies",
+    "name": "My Movies",
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#000000",
